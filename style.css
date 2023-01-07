@@ -66,6 +66,8 @@ p {
 }
 .grid-container {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem;
 }
 .hero-images {
   display: flex;
@@ -81,6 +83,11 @@ p {
   flex: 0 0 auto;
   -o-object-fit: contain;
   object-fit: contain;
+}
+.inner-hero-images {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 img {
