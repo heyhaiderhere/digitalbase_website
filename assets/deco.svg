@@ -1,0 +1,47 @@
+ <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 360 170"
+        width="360"
+        height="170"
+        preserveAspectRatio="xMidYMid meet"
+        style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px)"
+      >
+        <defs>
+          <clipPath id="__lottie_element_6">
+            <rect width="360" height="170" x="0" y="0"></rect>
+          </clipPath>
+          <clipPath id="__lottie_element_8">
+            <path d="M0,0 L500,0 L500,500 L0,500z"></path>
+          </clipPath>
+        </defs>
+        <g clip-path="url(#__lottie_element_6)">
+          <g
+            clip-path="url(#__lottie_element_8)"
+            transform="matrix(1,0,0,1,-77,-227)"
+            opacity="1"
+            style="display: block"
+          >
+            <g
+              transform="matrix(1,0,0,1,80.02700805664062,237.31900024414062)"
+              opacity="1"
+              style="display: block"
+            >
+              <g
+                opacity="1"
+                transform="matrix(1,0,0,1,177.00799560546875,72.43099975585938)"
+              >
+                <path
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  fill-opacity="0"
+                  stroke-miterlimit="4"
+                  stroke="rgb(244,202,81)"
+                  stroke-opacity="1"
+                  stroke-width="1"
+                  d=" M-67.26000213623047,57.555999755859375 C-24.413999557495117,56.70100021362305 24.597000122070312,50.57099914550781 67.30599975585938,39.939998626708984 C127.25700378417969,25.01799964904785 174.7899932861328,1.2269999980926514 175.41799926757812,-29.29199981689453 C176.00900268554688,-58.04899978637695 125.10600280761719,-71.43099975585938 68.25199890136719,-70.14199829101562 C-86.18199920654297,-66.64299774169922 -174.98399353027344,-31.347000122070312 -175.5760040283203,13.875 C-176.00900268554688,46.9630012512207 -98.53099822998047,63.595001220703125 -50.667999267578125,69.25800323486328 C-41.39699935913086,70.3550033569336 -33.22100067138672,71.04100036621094 -26.91200065612793,71.35399627685547"
+                ></path>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>

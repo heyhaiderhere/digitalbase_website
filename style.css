@@ -24,6 +24,7 @@ body {
   width: 100vw;
   display: flex;
   justify-content: center;
+  z-index: 999;
 }
 .navbar-move {
   background-color: rgba(0, 0, 0, 0.5);
@@ -67,6 +68,9 @@ p {
 .flex {
   display: flex;
 }
+.justify-between {
+  justify-content: space-between;
+}
 .main {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -98,6 +102,12 @@ h4 {
   letter-spacing: 1px;
   font-family: Inter, sans-serif;
 }
+.p-y {
+  padding: 32px 0;
+}
+.p-t {
+  padding: 32px 0;
+}
 .inline-text {
   display: inline;
 }
@@ -110,6 +120,14 @@ h4 {
   grid-auto-columns: 1fr;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 20px;
+}
+.key > h2 {
+  font-family: inter, sans-serif;
+  font-size: 36px;
+}
+.value > h2 {
+  font-family: inter, sans-serif;
+  font-size: 36px;
 }
 .key {
   grid-row: 1;
@@ -149,6 +167,15 @@ h4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
+.connect {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.value-connect {
+  grid-row: 1;
+  grid-column: 4/13;
+}
+
 .stats-text {
   display: flex;
   font-size: 56px;
