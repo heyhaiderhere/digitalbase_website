@@ -4,6 +4,8 @@
   --font-primary: #ffffff;
   --font-dark-purple: #150866;
   --font-golden: #f3ca51;
+  --font-grayed-out-1: #8e7ea5;
+  --font-grayed-out-2: #604784;
 }
 * {
   margin: 0;
@@ -167,15 +169,14 @@ h4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
-.connect {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-}
 .value-connect {
   grid-row: 1;
   grid-column: 4/13;
 }
-
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
 .stats-text {
   display: flex;
   font-size: 56px;
@@ -343,4 +344,30 @@ img {
   height: 430px;
   -o-object-fit: contain;
   object-fit: contain;
+}
+.gap {
+  gap: 5px;
+}
+.gap-20 {
+  gap: 30px;
+}
+.footer-column-wrapper {
+  display: flex;
+  width: 620px;
+  grid-row: 1;
+  grid-column: 6/13;
+}
+.footer-column-heading {
+  color: var(--font-grayed-out-2);
+  font-family: Poppins, sans-serif;
+  font-size: 20px;
+  line-height: 1.5em;
+  font-weight: 700;
+}
+.footer-link {
+  color: var(--font-grayed-out-1);
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 1.5em;
+  font-weight: 500;
 }
