@@ -17,7 +17,8 @@
 body {
   background-color: var(--bg-primary);
   position: relative;
-  font-family: "Poppins";
+  font-family: inter, sans-serif;
+  /* font-family: "Poppins"; */
   color: var(--font-primary);
 }
 
@@ -84,6 +85,9 @@ p {
   justify-content: center;
   align-items: center;
 }
+.font-weight-300 {
+  font-weight: 300;
+}
 .h1 {
   font-size: 85px;
   line-height: 1em;
@@ -92,23 +96,30 @@ p {
 }
 
 .h2 {
-  font-size: 40px;
+  font-size: 45px;
   line-height: 1em;
   font-weight: 700;
   letter-spacing: -0.04em;
+}
+h3 {
+  font-size: 36px;
+  line-height: 1.25em;
+  font-weight: 600;
 }
 h4 {
   font-size: 24px;
   line-height: 1em;
   font-weight: 700;
   letter-spacing: 1px;
-  font-family: Inter, sans-serif;
 }
 .p-y {
   padding: 32px 0;
 }
 .p-t {
   padding: 32px 0;
+}
+.margin-b-32 {
+  margin-bottom: 32px;
 }
 .inline-text {
   display: inline;
@@ -124,11 +135,9 @@ h4 {
   column-gap: 20px;
 }
 .key > h2 {
-  font-family: inter, sans-serif;
   font-size: 36px;
 }
 .value > h2 {
-  font-family: inter, sans-serif;
   font-size: 36px;
 }
 .key {
@@ -177,12 +186,30 @@ h4 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.icon-medium {
+  height: 53px;
+  width: 53px;
+}
+.icon-large {
+  height: 115px;
+  width: 115px;
+}
+.icon-extra-large {
+  min-height: 250px;
+  min-width: 250px;
+}
+.text-center {
+  text-align: center;
+}
 .stats-text {
   display: flex;
   font-size: 56px;
   line-height: 60px;
   font-weight: 700;
-  font-family: Inter, sans-serif;
 }
 .brand-div {
   display: flex;
@@ -224,6 +251,8 @@ h4 {
 }
 
 .hero-image {
+  border: 0;
+  max-width: 100%;
   display: block;
   width: 185px;
   flex: 0 0 auto;
@@ -239,10 +268,6 @@ h4 {
   gap: 5px;
 }
 
-img {
-  border: 0;
-  max-width: 100%;
-}
 .animation-button-golden {
   background-color: var(--font-golden);
 }
@@ -259,6 +284,25 @@ img {
 
 .animate-arrow:hover .arrow-svg {
   transform: rotate(0deg);
+}
+
+.arrow-left {
+  height: 25px;
+  transform: rotate(180deg);
+  transition: all ease-in-out 250ms;
+}
+.arrow-right {
+  height: 25px;
+  transform: rotate(0deg);
+  transition: all ease-in-out 250ms;
+}
+.arrow-bottom-right {
+  height: 25px;
+  transform: rotate(45deg);
+  transition: all ease-in-out 250ms;
+}
+.arrow-large {
+  height: 60px !important;
 }
 
 .animation-button-large {
@@ -283,6 +327,9 @@ img {
   justify-content: flex-end;
   column-gap: 16px;
   padding: 2rem 3rem 0 0;
+}
+.learn-more-link {
+  cursor: pointer;
 }
 .learn-more > .flex-center > p {
   font-size: 24px;
@@ -332,6 +379,9 @@ img {
 .font-purple {
   color: var(--font-dark-purple);
 }
+.font-size-24 {
+  font-size: 24px;
+}
 .justify-start {
   justify-content: flex-start;
 }
@@ -349,7 +399,16 @@ img {
   gap: 5px;
 }
 .gap-20 {
-  gap: 30px;
+  column-gap: 30px;
+}
+.gap-15 {
+  gap: 15px;
+}
+.gap-56 {
+  gap: 56px;
+}
+.width-full {
+  max-width: 100%;
 }
 .footer-column-wrapper {
   display: flex;
@@ -370,4 +429,70 @@ img {
   font-size: 16px;
   line-height: 1.5em;
   font-weight: 500;
+}
+.for-creators-wrapper {
+  align-items: center;
+}
+.for-creators-heading {
+  grid-row: 1;
+  grid-column: 1/5;
+}
+.for-creators-image-div {
+  grid-row: 1;
+  grid-column: 6/13;
+  position: relative;
+  overflow: hidden;
+  width: 700px;
+  height: 45vw;
+  max-height: 555px;
+  max-width: 100%;
+  border-radius: 1000px;
+}
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.for-creators-image-div > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.dark-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(8, 4, 33, 0.5);
+  background-image: linear-gradient(
+    0deg,
+    rgba(8, 4, 33, 0.8),
+    rgba(8, 4, 33, 0) 65%
+  );
+}
+.line-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #3c3663;
+}
+.for-creators-formula-grid {
+  display: grid;
+  row-gap: 160px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.for-creators-grid-item {
+  row-gap: 24px;
+}
+.line-height-lg {
+  line-height: 1.6em;
+}
+.joining-offer {
+  grid-row: 1;
+  grid-column: 1/8;
+}
+.joining-offer-button {
+  grid-row: 1;
+  grid-column: 8/13;
 }
