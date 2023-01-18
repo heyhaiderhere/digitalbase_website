@@ -367,26 +367,60 @@ h4 {
   line-height: 3rem;
 }
 .card-holder {
+  position: relative;
+  z-index: 5;
+  display: flex;
   width: 100vw;
   height: 640px;
-  z-index: 999;
+  justify-content: flex-start;
 }
 .first-card {
   position: relative;
-  width: 50vw;
-  height: 100%;
-  background-color: var(--font-golden);
+  z-index: 4;
   overflow: hidden;
-  padding: 80px;
+  width: 50vw;
+  padding: 80px 80px 80px 5.5vw;
+  flex: 0 0 auto;
+  background-color: var(--font-golden);
+  transition: 0.4s;
+  color: #150866;
+  text-decoration: none;
+  /* transition: all 250ms ease-in-out; */
+}
+.first-card:hover ~ .second-card {
+  opacity: 0.5;
+}
+.second-card:hover ~ .first-card {
+  opacity: 0.5;
+}
+
+.first-card:hover {
+  z-index: 6;
+  width: 60vw;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+}
+.second-card:hover {
+  z-index: 10;
+  width: 60vw;
+  border-top-left-radius: 80px;
+  border-bottom-left-radius: 80px;
 }
 
 .second-card {
-  width: 50vw;
-  height: 100%;
-  background-color: var(--bg-purple);
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
   overflow: hidden;
-  padding: 80px;
+  width: 50vw;
+  padding: 80px 5.5vw;
+  flex: 0 0 auto;
+  background-color: var(--bg-purple);
+  transition: 0.4s ease-in-out;
+  color: #fff;
+  text-decoration: none;
 }
 .card-paragraph {
   color: var(--font-dark-purple);
@@ -529,7 +563,7 @@ img {
 }
 .for-creators-heading-deco {
   position: absolute;
-  bottom: -16px;
+  bottom: -40px;
   display: block;
   width: 100%;
   height: auto;
@@ -774,6 +808,9 @@ footer {
     height: 65vw;
     margin-bottom: 24px;
   }
+  .for-creators-heading-deco {
+    bottom: -16px;
+  }
   .for-brands-image-div {
     margin-bottom: 24px;
     justify-content: center;
@@ -802,6 +839,9 @@ footer {
   .formulas {
     justify-self: normal;
     flex-direction: column;
+  }
+  .text-center-mobile {
+    text-align: center;
   }
   .p-l {
     padding: 0;
