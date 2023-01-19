@@ -374,54 +374,7 @@ h4 {
   height: 640px;
   justify-content: flex-start;
 }
-.first-card {
-  position: relative;
-  z-index: 4;
-  overflow: hidden;
-  width: 50vw;
-  padding: 80px 80px 80px 5.5vw;
-  flex: 0 0 auto;
-  background-color: var(--font-golden);
-  transition: 0.4s;
-  color: #150866;
-  text-decoration: none;
-  /* transition: all 250ms ease-in-out; */
-}
-.first-card:hover ~ .second-card {
-  opacity: 0.5;
-}
-.second-card:hover ~ .first-card {
-  opacity: 0.5;
-}
 
-.first-card:hover {
-  z-index: 6;
-  width: 60vw;
-  border-top-right-radius: 80px;
-  border-bottom-right-radius: 80px;
-}
-.second-card:hover {
-  z-index: 10;
-  width: 60vw;
-  border-top-left-radius: 80px;
-  border-bottom-left-radius: 80px;
-}
-
-.second-card {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 3;
-  overflow: hidden;
-  width: 50vw;
-  padding: 80px 5.5vw;
-  flex: 0 0 auto;
-  background-color: var(--bg-purple);
-  transition: 0.4s ease-in-out;
-  color: #fff;
-  text-decoration: none;
-}
 .card-paragraph {
   color: var(--font-dark-purple);
   font-size: 18px;
@@ -562,6 +515,14 @@ img {
   position: relative;
 }
 .for-creators-heading-deco {
+  position: absolute;
+  bottom: -40px;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+}
+.for-creators-heading-deco-large {
   position: absolute;
   bottom: -40px;
   display: block;
@@ -728,6 +689,56 @@ footer {
   }
 }
 
+@media (hover: hover) {
+  .first-card {
+    position: relative;
+    z-index: 4;
+    overflow: hidden;
+    width: 50vw;
+    padding: 80px 80px 80px 5.5vw;
+    flex: 0 0 auto;
+    background-color: var(--font-golden);
+    color: #150866;
+    text-decoration: none;
+    transition: all 250ms ease-in-out;
+  }
+  .second-card:hover ~ .first-card {
+    opacity: 0.5;
+  }
+  .first-card:hover ~ .second-card {
+    opacity: 0.5;
+  }
+
+  .first-card:hover {
+    z-index: 6;
+    width: 60vw;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+  }
+  .second-card:hover {
+    z-index: 10;
+    width: 60vw;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+  }
+
+  .second-card {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    overflow: hidden;
+    width: 50vw;
+    padding: 80px 5.5vw;
+    flex: 0 0 auto;
+    background-color: var(--bg-purple);
+    color: #fff;
+    text-decoration: none;
+    transition: all 250ms ease-in-out;
+  }
+}
+
 @media screen and (max-width: 767px) {
   /* Helping classes start */
   .h1 {
@@ -753,7 +764,49 @@ footer {
   .margin-b-80 {
     margin-bottom: 32px;
   }
+  .p-l {
+    padding: 0;
+  }
   /* Helping classes end */
+
+  .first-card {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    background-color: var(--font-golden);
+    overflow: hidden;
+    padding: 80px;
+  }
+  .card-holder {
+    width: 100vw;
+    height: 640px;
+    z-index: 999;
+  }
+  .second-card {
+    width: 100vw;
+    height: 100%;
+    background-color: var(--bg-purple);
+    position: relative;
+    overflow: hidden;
+    padding: 80px;
+  }
+  .first-card:hover {
+    width: 100vw;
+    border-radius: 0;
+  }
+  .first-card:hover ~ .second-card {
+    opacity: 1;
+  }
+  .second-card:hover {
+    width: 100vw;
+    border-radius: 0;
+  }
+  .card-image {
+    right: -75px;
+    bottom: -35px;
+    width: 450px;
+    height: 350px;
+  }
   .network,
   .support-to-scale,
   .grid,
@@ -761,6 +814,13 @@ footer {
     grid-column-gap: 16px;
     grid-row-gap: 16px;
     grid-template-columns: 1fr;
+  }
+  .key-connect {
+    grid-row: 1;
+  }
+  .value-connect {
+    grid-row: 2;
+    grid-column: 1;
   }
   .for-creators-formula-grid {
     row-gap: 80px;
@@ -811,6 +871,9 @@ footer {
   .for-creators-heading-deco {
     bottom: -16px;
   }
+  .for-creators-heading-deco-large {
+    bottom: -32px;
+  }
   .for-brands-image-div {
     margin-bottom: 24px;
     justify-content: center;
@@ -831,6 +894,9 @@ footer {
   .show-on-mobile {
     display: block;
   }
+  .card-holder {
+    flex-direction: column;
+  }
   .info-icon-container {
     flex-direction: column;
     align-items: flex-start;
@@ -842,8 +908,5 @@ footer {
   }
   .text-center-mobile {
     text-align: center;
-  }
-  .p-l {
-    padding: 0;
   }
 }
