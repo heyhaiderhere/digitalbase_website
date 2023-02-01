@@ -96,6 +96,14 @@ body {
 .email-link {
   color: var(--font-key);
 }
+.brand-button {
+  position: absolute;
+  right: -115px;
+  bottom: -110px;
+}
+.hero-image-mobile.hero-image {
+  display: none;
+}
 .map-div {
   position: relative;
   display: flex;
@@ -215,6 +223,41 @@ body {
   display: block;
 }
 
+.hamburger-icon .hamburger-line:nth-child(1) {
+  top: 0;
+  transition: all 250ms ease-in-out;
+  transform-origin: left center;
+  position: absolute;
+}
+
+.hamburger-icon .hamburger-line:nth-child(2) {
+  top: 6px;
+  transition: all 250ms ease-in-out;
+  position: absolute;
+}
+.hamburger-icon .hamburger-line:nth-child(3) {
+  transition: all 250ms ease-in-out;
+  position: absolute;
+  top: 12px;
+  transform-origin: left center;
+}
+
+.hamburger-icon.open .hamburger-line:nth-child(1) {
+  top: -1px;
+  left: 4px;
+  transform: rotate(45deg);
+}
+
+.hamburger-icon.open .hamburger-line:nth-child(2) {
+  width: 0;
+  opacity: 0;
+}
+.hamburger-icon.open .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg);
+  left: 4px;
+  top: 20px;
+}
+
 p {
   color: var(--font-primary);
 }
@@ -222,10 +265,11 @@ p {
   display: none;
 }
 .hamburger-icon {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  position: relative;
+  left: -10px;
+  top: 10px;
+  height: 100%;
+  width: 100%;
 }
 .hamburger-icon:hover {
   cursor: pointer;
@@ -715,6 +759,7 @@ h4 {
   font-size: 20px;
   line-height: 1.5em;
   font-weight: 700;
+  margin-bottom: 25px;
 }
 .footer-link {
   color: var(--font-grayed-out-1);
@@ -1067,6 +1112,10 @@ footer {
   .tagline-margin {
     margin: 0;
   }
+  .brand-button {
+    position: static;
+    margin-top: 32px;
+  }
   .hero-image {
     width: 155px;
   }
@@ -1091,6 +1140,9 @@ footer {
     width: 700px;
     height: 700px;
   }
+  .for-creators-heading {
+    align-items: center;
+  }
   .hero-image-2 {
     margin-bottom: 0;
   }
@@ -1110,6 +1162,8 @@ footer {
   }
   .hamburger {
     display: block;
+    height: 12px;
+    width: 30px;
   }
   .nav-list {
     z-index: 999;
@@ -1415,6 +1469,9 @@ footer {
     padding-right: 16px;
     padding-left: 16px;
   }
+  .brand-button {
+    margin-top: 24px;
+  }
   .home-hero-deco {
     top: -400px;
     width: 700px;
@@ -1425,6 +1482,44 @@ footer {
   }
   .hero-images {
     margin-top: -45px;
+  }
+  .home-hero-container {
+    order: -1;
+    margin-bottom: 30px;
+  }
+  .hero-image-1,
+  .hero-image-2 {
+    display: none;
+  }
+  .hero-image-3 {
+    margin-top: 35px;
+  }
+  .hero-image-4 {
+    margin-top: 60px;
+  }
+  .inner-hero-images {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .hero-image {
+    width: 33%;
+    height: auto;
+  }
+  .brand-div {
+    align-self: flex-end;
+    margin-right: 10px;
+  }
+  .btn-div {
+    row-gap: 20px;
+  }
+  .brand-div {
+    transform: scale(1.2);
+    margin-right: 30px;
+  }
+  .hero-image-mobile.hero-image {
+    margin-bottom: 20px;
+    display: block;
   }
   .for-creators-benefit-section-deco {
     width: 600px;
@@ -1494,13 +1589,13 @@ footer {
     flex-direction: column;
     align-items: center;
   }
-  .footer-column {
+  .footer-column.gap-20 {
     flex-direction: column;
     align-items: center;
+    gap: 100px;
   }
-  .footer-links-div {
-    flex-direction: column;
-    align-items: center;
+  #apple {
+    gap: 30px;
   }
   .learn-more > .animate-arrow > p {
     font-size: 16px;
