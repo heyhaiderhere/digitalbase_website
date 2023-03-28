@@ -1592,10 +1592,10 @@ footer {
   .footer-column.gap-20 {
     flex-direction: column;
     align-items: center;
-    gap: 100px;
   }
-  #apple {
-    gap: 30px;
+
+  .footer-links-div {
+    text-align: center;
   }
   .learn-more > .animate-arrow > p {
     font-size: 16px;
